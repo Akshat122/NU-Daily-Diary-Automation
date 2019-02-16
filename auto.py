@@ -32,19 +32,17 @@ dropdown = Select(br.find_element_by_id("Timeoutmin"));
 dropdown.select_by_visible_text("30"); # (30 Min) 6:30 PM
 
 
-email = br.find_element_by_id('txtKeyPerson') 
+key_person = br.find_element_by_id('txtKeyPerson') 
             
-email.send_keys("Bibek Deroy")  # Key Person
+key_person.send_keys("Bibek Deroy")  # Key Person
 
-email = br.find_element_by_id('txtEmail')
+key_person_email = br.find_element_by_id('txtEmail')
             
-email.send_keys("bibek.deroy@vintellus.com") # Key Person's Email ID
+key_person_email.send_keys("bibek.deroy@vintellus.com") # Key Person's Email ID
 
-email = br.find_element_by_id('txtDesc')
+Desc = br.find_element_by_id('txtDesc')
             
-email.send_keys("Working with the JUnit Test cases and Fixing Bugs") # !!!!!!!!!!!!!!-------JUST UPDATE THIS DAILY ----------!!!!!!!!!!!!!!!!!!!!!!!!!1
-
-
+Desc.send_keys("Working with the JUnit Test cases and Fixing Bugs") # !!!!!!!!!!!!!!-------JUST UPDATE THIS DAILY ----------!!!!!!!!!!!!!!!!!!!!!!!!!1
 
 br.find_element_by_id('ctl00_ContentPlaceHolder1_btnSubmit').click()
 
