@@ -1,5 +1,5 @@
 # NU-Daily-Diary-Automation
-Small python program to automate the boring Daily Diary of NIIT University.
+Small python program to automate the boring Daily Diary for IP of NIIT University.
 
 # How to use?
 * Just edit the auto.py with correct credentials of NU-nucleus.
