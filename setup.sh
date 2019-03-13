@@ -34,14 +34,14 @@ from selenium.webdriver.support.ui import Select
 
 chrome_options = Options()
 chrome_options.add_argument('--start-maximized')
-
 chrome_options.add_argument('--no-sandbox')
-
 
 br = webdriver.Chrome('$directory/chromedriver',chrome_options=chrome_options)  # Optional argument, if not specified will search path.
 
 br.get('https://nucleus.niituniversity.in/');
+
 time.sleep(1) # Let the user actually see something!
+
 email = br.find_element_by_id('SchSel_txtUserName') # Find the Username field
             
 email.send_keys('$Username') # Enter the username 
@@ -52,10 +52,6 @@ pas.send_keys('$Password') # Enter the Password
 
 # submit = br.find_element_by_id('SchSel_btnLogin') # Find the Submit button
 
-# To bypass the security to run script directly random clicks at different places 
-
-# ---End----
-
 time.sleep(1) # Time to update the onChnage() script on the website 
 
 br.execute_script('document.getElementById(\"SchSel_btnLogin\").click()') # JS to click the submit Button
@@ -65,7 +61,6 @@ time.sleep(1) # Let the user actually see something!
 br.get('https://nucleus.niituniversity.in/WebApp/StudParentDashBoard/DailyDiary.aspx')
 
 time.sleep(1)
-#select_element = Select(driver.find_element_by_css_selector('.form-control'))
 
 dropdown = Select(br.find_element_by_id('Timeinhr'));
 
@@ -96,6 +91,18 @@ email = br.find_element_by_id('txtDesc')
 email.send_keys('$Work_Description') 
 
 br.find_element_by_id('ctl00_ContentPlaceHolder1_btnSubmit').click()
+
+br.switch_to_alert().accept()
+
+time.sleep(1)
+
+br.find_element_by_id('ctl00_Header_imgstud').click()
+
+br.find_element_by_id('ctl00_Header_btnLogout').click()
+
+time.sleep(1)
+
+br.close()
 
 " > auto.py
 
