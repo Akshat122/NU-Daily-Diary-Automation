@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 myvariable=$USER
 directory=$(pwd)
 clear
